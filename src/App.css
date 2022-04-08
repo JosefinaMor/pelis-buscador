@@ -1,3 +1,18 @@
-.nav-bar{
-  display: flex;
+.nav-bar {
+  background-color: blue;
 }
+.nav-bar ul {
+  padding: 10px;
+  display: flex;
+  justify-content: start;
+}
+.nav-bar ul li {
+  padding: 5px;
+  margin-left: 5px;
+  list-style: none;
+}
+.nav-bar ul li Link {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=App.css.map */

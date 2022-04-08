@@ -1,0 +1,18 @@
+
+.nav-bar{
+  background-color: blue;
+  ul{
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    li{
+      padding: 5px;
+      margin-left: 5px;
+      list-style: none;
+      Link{
+        text-decoration: none;
+      }
+    }  
+  }
+  
+}
