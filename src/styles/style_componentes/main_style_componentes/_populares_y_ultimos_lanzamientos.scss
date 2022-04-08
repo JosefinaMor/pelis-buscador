@@ -1,0 +1,27 @@
+@import "./mini_componentes/card.scss";
+.page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    .prev-next-buttons{
+        @include display-flex-creator($direction: row, $justify-content: space-between, $align-items: center); 
+        @include box-parameter($margin: 30px 0 0 0);   
+        button{
+            @include button($back-color: $primary-color);
+            transition: 2ms;
+        }
+        button:hover{
+            background-color: $hover-color;
+        }
+        select{
+            @include button($back-color: #ffffff, $color: $primary-color);
+        }
+    }
+}

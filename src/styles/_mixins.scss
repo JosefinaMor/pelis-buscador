@@ -1,0 +1,46 @@
+@mixin display-flex-creator($direction: row, $justify-content: center, $align-items: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+@mixin button($back-color: transparent, $color: $typography-light-color){
+    height: 40px;
+    width: 60px;
+    @include display-flex-creator();
+    border-radius: $border-radius;
+    background-color: $back-color;
+    color: $color;
+    border: none;
+}
+@mixin input($width: 60%){
+    margin-right: 10px;
+    padding: 0 10px;
+    height: 40px;
+    width: $width;
+    border-radius: $border-radius;
+    background-color: #ffffff;
+    border: none;
+}
+@mixin img($opacity: 100%, $margin-botton: 10px, $width: 100%, $border-radius: $border-radius){
+    opacity: $opacity;
+    margin-bottom: $margin-botton;
+    width: $width;
+    border-radius: $border-radius;
+}
+@mixin card-especification($back-color: $primary-color, $color:$typography-light-color, $border-radius:$border-radius, $padding: 10px, $width:80%){
+    background-color: $back-color;
+    color: $color;
+    border-radius: $border-radius;
+    padding: $padding;
+    width: $width;
+}
+@mixin box-parameter($margin: 0 0 10px 0, $padding: 0, $width: 100%){
+    margin: $margin;
+    padding: $padding;
+    width: $width;
+}
+@mixin position($position: absolute, $z-index: 1){  
+    position: $position;
+    z-index: $z-index;
+}
