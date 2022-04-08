@@ -1,18 +1,4 @@
-
-.nav-bar{
-  background-color: blue;
-  ul{
-    padding: 10px;
-    display: flex;
-    justify-content: start;
-    li{
-      padding: 5px;
-      margin-left: 5px;
-      list-style: none;
-      Link{
-        text-decoration: none;
-      }
-    }  
-  }
-  
-}
+@import "./styles/resets";
+@import "./styles/variables";
+@import "./styles/style_componentes/nav_bar";
+@import "./styles/style_componentes/footer";

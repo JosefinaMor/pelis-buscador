@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './componentes/Nav_bar';
+import Footer from './componentes/Footer';
 import './App.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           
         </Routes>
+        <Footer></Footer>
       </BrowserRouter>
     </div>
   );

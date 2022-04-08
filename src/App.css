@@ -1,18 +1,28 @@
 .nav-bar {
-  background-color: blue;
+  background-color: #00000042;
+  color: #FFFFFF;
 }
 .nav-bar ul {
+  margin: 0;
   padding: 10px;
   display: flex;
   justify-content: start;
 }
 .nav-bar ul li {
-  padding: 5px;
+  padding: 10px 5px 10px 5px;
   margin-left: 5px;
   list-style: none;
 }
 .nav-bar ul li Link {
   text-decoration: none;
+}
+.nav-bar ul li:hover {
+  background-color: #000000;
+}
+
+footer {
+  background-color: #00000042;
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=App.css.map */
