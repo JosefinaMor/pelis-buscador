@@ -47,8 +47,12 @@ const UltimosLanzamientos = () => {
           ))}
         </div>
         <div className="prev-next-buttons">
-          <button onClick={() => handleClickPrev(pagina)} id="prev-page-button" aria-label="previous page"><GrCaretPrevious /></button>
-          <button onClick={() => handleClickNext(totalPaginas, pagina)} id="next-page-button" aria-label="next page"><GrCaretNext /></button>
+          <button onClick={() => handleClickPrev(pagina)} 
+                  id="prev-page-button"  
+                  aria-label="previous page"><GrCaretPrevious /></button>
+          <button onClick={() => handleClickNext(totalPaginas, pagina)} 
+                  id="next-page-button" 
+                  aria-label="next page"><GrCaretNext /></button>
         </div>
       </div>
     );

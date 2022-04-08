@@ -35,8 +35,14 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.container-sugerencias div {
-  height: 50vh;
+.container-sugerencias .container-listas {
+  width: 50%;
+  margin: 20px;
+  padding: 20px;
+  width: 100%;
+}
+.container-sugerencias .container-listas ul {
+  height: 60vh;
   background-color: #3E4658;
   color: #FFFFFF;
   border-radius: 10px;
@@ -47,8 +53,19 @@ body {
   width: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container-sugerencias .container-listas ul .card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 10px 0;
+  padding: 5px;
+  width: 100%;
 }
 
 .card {
@@ -148,7 +165,6 @@ body {
 }
 
 .search-section {
-  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: start;
