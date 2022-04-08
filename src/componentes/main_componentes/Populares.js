@@ -4,14 +4,31 @@ import { GrCaretNext, GrCaretPrevious } from 'react-icons/gr';
 
 const Populares = () => {
   const [arrayPelisPopulares, setArrayPelisPopulares] = useState([]);
+  const [pagina, setPagina] = useState(1);
+  const [totalPaginas, setTotalPaginas] = useState(1);
+
+  const handleClickPrev = (pagina) =>{
+    if(pagina > 1){
+      setPagina(pagina - 1);
+    }
+    console.log(pagina)
+
+  }
+
+  const handleClickNext = (totalPaginas, pagina) =>{
+    if(pagina < totalPaginas){
+      setPagina(pagina + 1);
+    }
+  }
 
   useEffect(() => {
-    fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=4e1ae359e8d00fd3c5fa0742e3a2be5f&language=es-ES&page=1')
+    fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=4e1ae359e8d00fd3c5fa0742e3a2be5f&language=es-ES&page=${pagina}`)
       .then(res => res.json())
       .then((cardData)=>{
         setArrayPelisPopulares(cardData.results);
+        setTotalPaginas(cardData.total_pages);
       })
-  }, []);
+  }, [pagina]);
 
   
   return (
@@ -29,8 +46,12 @@ const Populares = () => {
         
       </div>
       <div className="prev-next-buttons">
-        <button id="prev-page-button" aria-label="previous page"><GrCaretPrevious /></button>
-        <button id="next-page-button" aria-label="next page"><GrCaretNext /></button>
+        <button onClick={() => handleClickPrev(pagina)} 
+                id="prev-page-button"  
+                aria-label="previous page"><GrCaretPrevious /></button>
+        <button onClick={() => handleClickNext(totalPaginas, pagina)} 
+                id="next-page-button" 
+                aria-label="next page"><GrCaretNext /></button>
       </div>
     </div>
   );
