@@ -104,8 +104,35 @@ body {
   border: none;
 }
 
+.card {
+  background-color: #3E4658;
+  color: #FFFFFF;
+  border-radius: 10px;
+  padding: 10px;
+  width: 15%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.card div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+}
+
 .search-section {
   height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.search-section .buscador {
   margin: 30px 0;
   padding: 0;
   width: 100%;
@@ -114,7 +141,7 @@ body {
   justify-content: center;
   align-items: start;
 }
-.search-section input {
+.search-section .buscador input {
   margin-right: 10px;
   padding: 0 10px;
   height: 40px;
@@ -123,7 +150,7 @@ body {
   background-color: #ffffff;
   border: none;
 }
-.search-section button {
+.search-section .buscador button {
   height: 40px;
   width: 60px;
   display: flex;
@@ -135,11 +162,18 @@ body {
   color: #FFFFFF;
   border: none;
 }
-.search-section button i {
+.search-section .buscador button i {
   font-size: 15px;
 }
-.search-section button:hover {
+.search-section .buscador button:hover {
   background-color: #8c9caf;
+}
+.search-section .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
 }
 
 footer {
@@ -150,7 +184,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
-footer div {
+footer footer-abajo {
   width: 60%;
   display: flex;
   justify-content: space-around;

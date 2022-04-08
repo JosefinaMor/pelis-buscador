@@ -1,17 +1,25 @@
+@import "./mini_componentes/card.scss";
 .search-section{
     height: 80vh;
-    @include box-parameter($margin: 30px 0);
-    @include display-flex-creator($direction: row, $justify-content: center, $align-items: start);
-    input{
-        @include input();
-    }
-    button{
-        @include button($back-color: $primary-color);
-        i{
-            font-size: 15px;
+    .buscador{
+        @include box-parameter($margin: 30px 0);
+        @include display-flex-creator($direction: row, $justify-content: center, $align-items: start);
+        input{
+            @include input();
+        }
+        button{
+            @include button($back-color: $primary-color);
+            i{
+                font-size: 15px;
+            }
+        }
+        button:hover{
+            background-color: $hover-color;
         }
     }
-    button:hover{
-        background-color: $hover-color;
+    @include display-flex-creator($direction: column, $justify-content: start, $align-items: center); 
+    .container{  
+        @include display-flex-creator($justify-content: space-between, $align-items: stretch);
+        flex-wrap: wrap; 
     }
 }
