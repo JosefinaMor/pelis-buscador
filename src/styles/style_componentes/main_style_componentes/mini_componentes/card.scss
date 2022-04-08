@@ -1,17 +1,12 @@
 .card{
-    border: black;
-    border-radius: 5px;
-    padding: 10px;
+    @include card-especification($back-color: $primary-color, $color:$typography-light-color, $border-radius:$border-radius, $padding: 10px, $width:15%);
     margin: 10px;
-    width: 15%;
     display: flex;
     flex-direction: column;
     div{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include display-flex-creator($justify-content: center, $align-items: center); 
     }
 }
 .card:hover{
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;;
+    box-shadow: $box-shadow;
 }

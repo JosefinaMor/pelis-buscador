@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { GrCaretNext, GrCaretPrevious } from 'react-icons/gr';
+
 
 const UltimosLanzamientos = () => {
 
@@ -23,6 +25,10 @@ const UltimosLanzamientos = () => {
             </div>
           </div>
           ))}
+        </div>
+        <div className="prev-next-buttons">
+          <button id="prev-page-button" aria-label="previous page"><GrCaretPrevious /></button>
+          <button id="next-page-button" aria-label="next page"><GrCaretNext /></button>
         </div>
       </div>
     );
