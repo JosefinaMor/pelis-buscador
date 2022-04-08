@@ -27,8 +27,8 @@ const Home = () => {
 
 
     return (
-      <div>
-        <div className="container-ult-lanzamiento">      
+      <div className="container-sugerencias">
+        <div>      
           {arrayUltimosLanzamientos.map((pelicula) =>(
           <div className="card">
             <div>
@@ -38,7 +38,7 @@ const Home = () => {
           </div>
           ))}
         </div>
-        <div className="container-popular">
+        <div>
           {arrayPelisPopulares.map((pelicula, index) =>(
           <div className="card">
             <div>

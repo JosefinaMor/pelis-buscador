@@ -1,15 +1,9 @@
-div{
-    @include display-flex-creator($direction: column, $justify-content: center, $align-items: center);
-    .container-ult-lanzamiento{
+.container-sugerencias{
+    @include display-flex-creator($justify-content: space-between, $align-items: center);
+    div{
+        height: 50vh;
         @include card-especification();
         @include box-parameter($margin: 20px, $padding: 20px, $width: 90%);
-        @include display-flex-creator($justify-content: space-between, $align-items: stretch);
-        overflow-x: auto;
-    }
-    .container-popular{
-        @include card-especification();
-        @include box-parameter($margin: 20px, $padding: 20px, $width: 90%);
-        @include display-flex-creator($justify-content: space-between, $align-items: stretch);
-        overflow-x: auto;
+        @include display-flex-creator($direction: column, $justify-content: center, $align-items: center);
     }
 }

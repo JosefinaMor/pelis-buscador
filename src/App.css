@@ -29,41 +29,26 @@ body {
   background-color: #000000;
 }
 
-div {
+.container-sugerencias {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-sugerencias div {
+  height: 50vh;
+  background-color: #3E4658;
+  color: #FFFFFF;
+  border-radius: 10px;
+  padding: 10px;
+  width: 80%;
+  margin: 20px;
+  padding: 20px;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-div .container-ult-lanzamiento {
-  background-color: #3E4658;
-  color: #FFFFFF;
-  border-radius: 10px;
-  padding: 10px;
-  width: 80%;
-  margin: 20px;
-  padding: 20px;
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  overflow-x: auto;
-}
-div .container-popular {
-  background-color: #3E4658;
-  color: #FFFFFF;
-  border-radius: 10px;
-  padding: 10px;
-  width: 80%;
-  margin: 20px;
-  padding: 20px;
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  overflow-x: auto;
 }
 
 .card {
