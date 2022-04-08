@@ -3,7 +3,7 @@
 const Buscar = () => {
     
     return (
-      <div></div>
+      <div>buscar</div>
     );
   }
   

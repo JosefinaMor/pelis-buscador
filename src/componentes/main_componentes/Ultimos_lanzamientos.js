@@ -1,7 +1,7 @@
 const UltimosLanzamientos = () => {
     
     return (
-      <div></div>
+      <div>ultimos lanzamientos</div>
     );
   }
   

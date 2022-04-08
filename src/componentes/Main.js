@@ -8,10 +8,10 @@ const Main = () => {
     
     return (
       <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="./componentes/main_componentes/Ultimos_lanzamientos" element={<UltimosLanzamientos />}/>
-          <Route path="./componentes/main_componentes/Populares" element={<Populares />}/>
-          <Route path="./componentes/main_componentes/Buscar" element={<Buscar />}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/Ultimos_lanzamientos" element={<UltimosLanzamientos />} />
+          <Route path="/Populares" element={<Populares />} />
+          <Route path="/Buscar" element={<Buscar />} />
       </Routes>
     );
   }

@@ -1,7 +1,7 @@
 const Populares = () => {
     
     return (
-      <div></div>
+      <div>populares</div>
     );
   }
   
