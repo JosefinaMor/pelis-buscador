@@ -1,4 +1,14 @@
 footer{
+    height: 60px;
     background-color: #00000042;
     color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div{
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+    }
 }

@@ -1,3 +1,11 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: "300";
+  background-color: #BCCBD8;
+  margin: 0;
+  height: 100vh;
+}
+
 .nav-bar {
   background-color: #00000042;
   color: #FFFFFF;
@@ -9,6 +17,7 @@
   justify-content: start;
 }
 .nav-bar ul li {
+  border-radius: 10px;
   padding: 10px 5px 10px 5px;
   margin-left: 5px;
   list-style: none;
@@ -21,8 +30,18 @@
 }
 
 footer {
+  height: 60px;
   background-color: #00000042;
   color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer div {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
 }
 
 /*# sourceMappingURL=App.css.map */
