@@ -8,7 +8,7 @@ const NavBar = () => {
           <ul>
               <li><GiFilmStrip /></li>
               <li><Link to={'/'}>Home</Link></li>
-              <li><Link to={'/'}>Ultimos lanzamientos</Link></li>
+              <li><Link to={'./main_componentes/Ultimos_lanzamientos'}>Ultimos lanzamientos</Link></li>
               <li><Link to={'/'}>Populares</Link></li>
               <li><Link to={'/'}>Buscar</Link></li>
               <li><Link to={'/'}>Buscar</Link></li>

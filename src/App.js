@@ -1,5 +1,6 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes } from 'react-router-dom';
 import NavBar from './componentes/Nav_bar';
+import Main from './componentes/Main';
 import Footer from './componentes/Footer';
 import './App.css';
 
@@ -8,9 +9,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <NavBar></NavBar>
-        <Routes>
-          <Route></Route>
-        </Routes>
+          <Main></Main>
         <Footer></Footer>
       </BrowserRouter>
     </div>
