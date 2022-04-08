@@ -104,6 +104,44 @@ body {
   border: none;
 }
 
+.search-section {
+  height: 80vh;
+  margin: 30px 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+}
+.search-section input {
+  margin-right: 10px;
+  padding: 0 10px;
+  height: 40px;
+  width: 60%;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: none;
+}
+.search-section button {
+  height: 40px;
+  width: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #3E4658;
+  color: #FFFFFF;
+  border: none;
+}
+.search-section button i {
+  font-size: 15px;
+}
+.search-section button:hover {
+  background-color: #8c9caf;
+}
+
 footer {
   height: 60px;
   background-color: #00000042;

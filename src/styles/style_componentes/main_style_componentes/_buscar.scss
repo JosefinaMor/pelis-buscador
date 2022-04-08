@@ -1,0 +1,17 @@
+.search-section{
+    height: 80vh;
+    @include box-parameter($margin: 30px 0);
+    @include display-flex-creator($direction: row, $justify-content: center, $align-items: start);
+    input{
+        @include input();
+    }
+    button{
+        @include button($back-color: $primary-color);
+        i{
+            font-size: 15px;
+        }
+    }
+    button:hover{
+        background-color: $hover-color;
+    }
+}
