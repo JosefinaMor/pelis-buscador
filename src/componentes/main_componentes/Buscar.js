@@ -50,13 +50,14 @@ const Buscar = () => {
       <div className="search-section">
         <div className="buscador">
           <input type="text" onBlur={handleBlur}/>
-          <button onClick={handleClick} aria-label="search button"><BiSearchAlt /></button>
+          <button onClick={handleClick} 
+                  aria-label="search button"><BiSearchAlt /></button>
         </div>
         {mostrarCards && 
         <div className="container">
           {arrayBusquedaPelis.map((pelicula) =>(
             <div className="card">
-              <img src="http://placekitten.com/200/300" alt={pelicula.title} />
+              <img src={`http://image.tmdb.org/t/p/w200/${pelicula.poster_path}`} alt={pelicula.title} />
               <div>
                 <h2>{pelicula.title}</h2>
               </div>
