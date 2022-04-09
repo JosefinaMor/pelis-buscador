@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { BiShow } from "react-icons/bi";
+import { Link } from 'react-router-dom';
 
-
-
-const Sugerencia_pelis = ({ tipoPeli }) => {
+const Sugerencia_pelis = ({ tipoPeli, titulo }) => {
 
     const [arrayPelis, setArrayPelis] = useState([]);
     
@@ -17,11 +16,14 @@ const Sugerencia_pelis = ({ tipoPeli }) => {
     }, []);
   
     return (
-        <ul>      
+        <ul> 
+          <h2>{titulo}</h2>     
             {arrayPelis.map((pelicula) =>(
                 <li className="card">
-                    <h2>{pelicula.title}</h2>
+                  <Link to={'/Pelicula'}>
+                    <h3>{pelicula.title}</h3>
                     <BiShow />
+                  </Link>
                 </li>
             ))}
         </ul>
