@@ -7,8 +7,11 @@ body {
 }
 
 .nav-bar {
+  width: 100vw;
   background-color: #00000042;
   color: #FFFFFF;
+  position: fixed;
+  z-index: 1;
 }
 .nav-bar ul {
   margin: 0;
@@ -66,6 +69,25 @@ body {
   margin: 0 0 10px 0;
   padding: 5px;
   width: 100%;
+}
+.container-sugerencias .container-listas ul::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.container-sugerencias .container-listas ul::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+.container-sugerencias .container-listas ul::-webkit-scrollbar-button:increment, .container-sugerencias .container-listas ul::-webkit-scrollbar-button {
+  display: none;
+}
+.container-sugerencias .container-listas ul::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+.container-sugerencias .container-listas ul::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+}
+.container-sugerencias .container-listas ul::-webkit-scrollbar-track {
+  border-radius: 10px;
 }
 
 .card {
@@ -140,6 +162,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.page h1 {
+  margin: 80px 0 30px 0;
 }
 .page .container {
   display: flex;

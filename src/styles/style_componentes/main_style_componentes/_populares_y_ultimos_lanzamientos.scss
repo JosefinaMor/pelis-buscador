@@ -3,6 +3,9 @@
 
 .page{
     @include display-flex-creator($direction: column, $justify-content: center, $align-items: center); 
+    h1{
+        margin: 80px 0 30px 0;
+    }
     .container{  
         @include display-flex-creator($justify-content: space-between, $align-items: stretch);
         flex-wrap: wrap; 

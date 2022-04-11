@@ -1,6 +1,9 @@
 .nav-bar{
+    width: 100vw;
     background-color: #00000042;
     color: #FFFFFF;
+    position: fixed;
+    z-index: 1;
     ul{
       margin: 0;
       padding: 10px;
