@@ -84,6 +84,11 @@ body {
   justify-content: center;
   align-items: center;
 }
+.card div h2 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 
 .card:hover {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
@@ -159,6 +164,11 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+.card div h2 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .card:hover {

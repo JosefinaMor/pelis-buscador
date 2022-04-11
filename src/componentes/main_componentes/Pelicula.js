@@ -1,3 +1,4 @@
+
 const Pelicula = ({ movie_id }) =>{
 
     /*useEffect(() => {

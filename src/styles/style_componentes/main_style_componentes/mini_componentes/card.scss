@@ -5,6 +5,11 @@
     flex-direction: column;
     div{
         @include display-flex-creator($justify-content: center, $align-items: center); 
+        h2{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
     }
 }
 .card:hover{
