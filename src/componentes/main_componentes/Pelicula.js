@@ -10,7 +10,32 @@ const Pelicula = ({ movie_id }) =>{
     }, [query, pagina]);*/
 
     return(
-        <div>hola soy pelicula</div>
+        <div className="main-pelicula">
+            <div className="container-peli">
+                <section className="foto">
+                    <img src="https://placekitten.com/200/300" alt="" />
+                </section>
+
+                <section class="info-general">
+                    <div className="titulo">
+                        <h2>Sonic 2: La Película</h2>
+                        <button>ver trailer</button>
+                    </div>
+                    <div>
+                        <h3>general</h3>
+                        <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. At eaque culpa atque ad suscipit maxime dolorem delectus nisi aspernatur labore et mollitia, amet sunt voluptas odit, in laudantium repudiandae itaque!
+                        </p>
+                    </div>
+                    <div>
+                        <h3>general</h3>
+                        <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. At eaque culpa atque ad suscipit maxime dolorem delectus nisi aspernatur labore et mollitia, amet sunt voluptas odit, in laudantium repudiandae itaque!
+                        </p>
+                    </div>
+                </section>
+            </div>
+    </div>
     );
 }
 

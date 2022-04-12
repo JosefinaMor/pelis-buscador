@@ -1,0 +1,39 @@
+.main-pelicula{
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container-peli{
+        width: 70%;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        background-color: rgba(127, 255, 212, 0.604);
+        .foto{
+            width: 35%;
+            margin-right: 30px;
+            img{
+            width: 100%;
+            }
+        } 
+        .info-general{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+            .titulo{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                button{
+                    @include button($back-color: blue, $color: $typography-light-color);
+                }
+                button:hover{
+                    background-color: aquamarine;
+                }
+            }
+        }
+    }
+  }
+  

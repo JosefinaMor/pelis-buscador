@@ -294,6 +294,54 @@ body {
   flex-wrap: wrap;
 }
 
+.main-pelicula {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-pelicula .container-peli {
+  width: 70%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  background-color: rgba(127, 255, 212, 0.604);
+}
+.main-pelicula .container-peli .foto {
+  width: 35%;
+  margin-right: 30px;
+}
+.main-pelicula .container-peli .foto img {
+  width: 100%;
+}
+.main-pelicula .container-peli .info-general {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+}
+.main-pelicula .container-peli .info-general .titulo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.main-pelicula .container-peli .info-general .titulo button {
+  height: 40px;
+  width: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: blue;
+  color: #FFFFFF;
+  border: none;
+}
+.main-pelicula .container-peli .info-general .titulo button:hover {
+  background-color: aquamarine;
+}
+
 footer {
   height: 60px;
   background-color: #00000042;
