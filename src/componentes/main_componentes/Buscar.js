@@ -6,19 +6,19 @@ import { GrChapterPrevious, GrCaretPrevious, GrCaretNext, GrChapterNext } from '
 
 const Buscar = () => {
 
-    const [mostrarCards, setMostrarCards] = useState(false);
-    const [query, setQuery] = useState("Undefined");
-    const [valorInput, setValorInput] = useState("");
-    const [arrayBusquedaPelis, setArrayBusquedaPelis] = useState([]);
+  const [mostrarCards, setMostrarCards] = useState(false);
+  const [query, setQuery] = useState("Undefined");
+  const [valorInput, setValorInput] = useState("");
+  const [arrayBusquedaPelis, setArrayBusquedaPelis] = useState([]);
     
-    const handleBlur = (e) =>{
-      setValorInput(e.target.value);
-    }
+  const handleBlur = (e) =>{
+    setValorInput(e.target.value);
+  }
 
-    const handleClick = () =>{
-      setQuery(valorInput);
-      setMostrarCards(true);
-    }
+  const handleClick = () =>{
+    setQuery(valorInput);
+    setMostrarCards(true);
+  }
 
   const [pagina, setPagina] = useState(1);
   const [totalPaginas, setTotalPaginas] = useState(1);
@@ -52,7 +52,8 @@ const Buscar = () => {
         <div className="buscador">
           <input type="text" onBlur={handleBlur}/>
           <button onClick={handleClick} 
-                  aria-label="search button"><BiSearchAlt /></button>
+                  aria-label="search button"
+                  ><BiSearchAlt /></button>
         </div>
         {mostrarCards && 
         <div className="container">
