@@ -10,8 +10,9 @@ const Populares = () => {
   const [pagina, setPagina] = useState(1);
   const [totalPaginas, setTotalPaginas] = useState(1);
 
-  const handleAccion = (e) =>{
-    console.log(e);
+  const handleAccion = (pagina) =>{
+    console.log(pagina);
+    setPagina(pagina);
   }
 
   useEffect(() => {
@@ -20,7 +21,7 @@ const Populares = () => {
       .then((cardData)=>{
         setTotalPaginas(cardData.total_pages);
       })
-  }, []);
+  }, [pagina]);
 
   //https://zeroidentidad.gitbook.io/react-puro-19/3-props/comunicacion_componente_padre
   return (
@@ -32,7 +33,7 @@ const Populares = () => {
       <BotonPrevNextPaginado 
       pagina={pagina}
       totalPaginas={totalPaginas}
-      onAction={() => handleAccion()}/>
+      onAction={() => handleAccion(pagina)}/>
     </div>
   );
 }
