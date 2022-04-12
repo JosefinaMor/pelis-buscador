@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { GrCaretNext, GrCaretPrevious } from 'react-icons/gr';
+import { GrChapterPrevious, GrCaretPrevious, GrCaretNext, GrChapterNext } from 'react-icons/gr';
 
 
 const UltimosLanzamientos = () => {
@@ -48,10 +48,16 @@ const UltimosLanzamientos = () => {
         <div className="prev-next-buttons">
           <button onClick={() => handleClickPrev(pagina)} 
                   id="prev-page-button"  
+                  aria-label="previous page"><GrChapterPrevious /></button>
+          <button onClick={() => handleClickPrev(pagina)} 
+                  id="prev-page-button"  
                   aria-label="previous page"><GrCaretPrevious /></button>
           <button onClick={() => handleClickNext(totalPaginas, pagina)} 
                   id="next-page-button" 
                   aria-label="next page"><GrCaretNext /></button>
+          <button onClick={() => handleClickNext(totalPaginas, pagina)} 
+                  id="next-page-button" 
+                  aria-label="next page"><GrChapterNext /></button>
         </div>
       </div>
     );
