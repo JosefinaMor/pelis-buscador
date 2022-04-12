@@ -6,7 +6,7 @@ import { GrCaretNext, GrCaretPrevious } from 'react-icons/gr';
 const Buscar = () => {
 
     const [mostrarCards, setMostrarCards] = useState(false);
-    const [query, setQuery] = useState("cinderella");
+    const [query, setQuery] = useState("Undefined");
     const [valorInput, setValorInput] = useState("");
     const [arrayBusquedaPelis, setArrayBusquedaPelis] = useState([]);
     

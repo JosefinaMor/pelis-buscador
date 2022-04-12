@@ -5,6 +5,7 @@
     .buscador{
         @include box-parameter($margin: 30px 0);
         @include display-flex-creator($direction: row, $justify-content: center, $align-items: start);
+        margin: 80px 0 0 0;
         input{
             @include input();
         }

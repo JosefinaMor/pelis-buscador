@@ -7,6 +7,7 @@ body {
 }
 
 .nav-bar {
+  top: 0;
   width: 100vw;
   background-color: #00000042;
   color: #FFFFFF;
@@ -32,19 +33,20 @@ body {
   background-color: #000000;
 }
 
-.container-sugerencias {
+.container-home {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin: 90px 0 0 0;
 }
-.container-sugerencias .container-listas {
+.container-home .container-listas {
   width: 50%;
   margin: 20px;
   padding: 20px;
   width: 100%;
 }
-.container-sugerencias .container-listas ul {
+.container-home .container-listas ul {
   height: 60vh;
   background-color: #3E4658;
   color: #FFFFFF;
@@ -61,7 +63,7 @@ body {
   overflow: scroll;
   overflow-x: hidden;
 }
-.container-sugerencias .container-listas ul .card {
+.container-home .container-listas ul .card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -70,23 +72,23 @@ body {
   padding: 5px;
   width: 100%;
 }
-.container-sugerencias .container-listas ul::-webkit-scrollbar {
+.container-home .container-listas ul::-webkit-scrollbar {
   -webkit-appearance: none;
 }
-.container-sugerencias .container-listas ul::-webkit-scrollbar:vertical {
+.container-home .container-listas ul::-webkit-scrollbar:vertical {
   width: 10px;
 }
-.container-sugerencias .container-listas ul::-webkit-scrollbar-button:increment, .container-sugerencias .container-listas ul::-webkit-scrollbar-button {
+.container-home .container-listas ul::-webkit-scrollbar-button:increment, .container-home .container-listas ul::-webkit-scrollbar-button {
   display: none;
 }
-.container-sugerencias .container-listas ul::-webkit-scrollbar:horizontal {
+.container-home .container-listas ul::-webkit-scrollbar:horizontal {
   height: 10px;
 }
-.container-sugerencias .container-listas ul::-webkit-scrollbar-thumb {
+.container-home .container-listas ul::-webkit-scrollbar-thumb {
   background-color: #797979;
   border-radius: 20px;
 }
-.container-sugerencias .container-listas ul::-webkit-scrollbar-track {
+.container-home .container-listas ul::-webkit-scrollbar-track {
   border-radius: 10px;
 }
 
@@ -255,6 +257,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: start;
+  margin: 80px 0 0 0;
 }
 .search-section .buscador input {
   margin-right: 10px;
