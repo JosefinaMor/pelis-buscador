@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { BiSearchAlt } from "react-icons/bi";
+import Cards from "./componentes_pequenios/Cards";
 import { GrChapterPrevious, GrCaretPrevious, GrCaretNext, GrChapterNext } from 'react-icons/gr';
 
 
@@ -8,8 +9,8 @@ const Buscar = () => {
 
   const [mostrarCards, setMostrarCards] = useState(false);
   const [query, setQuery] = useState("Undefined");
+  const [paginaQuery, setPaginaQuery] = useState(1);
   const [valorInput, setValorInput] = useState("");
-  const [arrayBusquedaPelis, setArrayBusquedaPelis] = useState([]);
     
   const handleBlur = (e) =>{
     setValorInput(e.target.value);
@@ -25,7 +26,7 @@ const Buscar = () => {
 
   const handleClickPrev = (pagina) =>{
     if(pagina > 1){
-      setPagina(pagina - 1);
+      setPaginaQuery(pagina - 1);
     }
     console.log(pagina)
 
@@ -33,19 +34,9 @@ const Buscar = () => {
 
   const handleClickNext = (totalPaginas, pagina) =>{
     if(pagina < totalPaginas){
-      setPagina(pagina + 1);
+      setPaginaQuery(pagina + 1);
     }
   }
-
-    useEffect(() => {
-      fetch(`https://api.themoviedb.org/3/search/movie?api_key=4e1ae359e8d00fd3c5fa0742e3a2be5f&query=${query}&page=${pagina}`)
-        .then(res => res.json())
-        .then((cardData)=>{
-          console.log(cardData.results)
-          setArrayBusquedaPelis(cardData.results);
-          setTotalPaginas(cardData.total_pages);
-        })
-    }, [query, pagina]);
 
     return (
       <div className="search-section">
@@ -56,16 +47,13 @@ const Buscar = () => {
                   ><BiSearchAlt /></button>
         </div>
         {mostrarCards && 
-        <div className="container">
-          {arrayBusquedaPelis.map((pelicula) =>(
-            <div className="card">
-              <img src={`http://image.tmdb.org/t/p/w200/${pelicula.poster_path}`} alt={pelicula.title} />
-              <div>
-                <h2>{pelicula.title}</h2>
-              </div>
-            </div>
-          ))}
-        </div>}
+        <Cards 
+          query={query}
+          categoria={"Undefined"}
+          pagina={pagina}
+          paginaQuery={paginaQuery}
+          busqueda={true}
+        />}
         <div className="prev-next-buttons">
         <button onClick={() => handleClickPrev(pagina)} 
                 id="prev-page-button"  

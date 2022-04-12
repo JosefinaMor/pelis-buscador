@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { GrChapterPrevious, GrCaretPrevious, GrCaretNext, GrChapterNext } from 'react-icons/gr';
 import Cards from "./componentes_pequenios/Cards";
 import BotonPrevNextPaginado from "./componentes_pequenios/BotonPrevNextPaginado";
 
@@ -8,6 +7,7 @@ import BotonPrevNextPaginado from "./componentes_pequenios/BotonPrevNextPaginado
 const Populares = () => {
  // const [arrayPelisPopulares, setArrayPelisPopulares] = useState([]);
   const [pagina, setPagina] = useState(1);
+  const [paginaQuery] = useState(1);
   const [totalPaginas, setTotalPaginas] = useState(1);
 
   const handleAccion = (pagina) =>{
@@ -28,12 +28,15 @@ const Populares = () => {
     <div className="page">
       <h1>Populares</h1>
       <Cards 
-      categoria={"top_rated"}
-      pagina={pagina}/>
+        query={"Undefined"}
+        categoria={"top_rated"}
+        pagina={pagina}
+        paginaQuery={paginaQuery}
+        busqueda={true}/>
       <BotonPrevNextPaginado 
-      pagina={pagina}
-      totalPaginas={totalPaginas}
-      onAction={() => handleAccion(pagina)}/>
+        pagina={pagina}
+        totalPaginas={totalPaginas}
+        onAction={(pagina) => handleAccion(pagina)}/>
     </div>
   );
 }

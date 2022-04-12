@@ -5,14 +5,12 @@ import { GrChapterPrevious, GrCaretPrevious, GrCaretNext, GrChapterNext } from '
 const BotonPrevNextPaginado = ({ pagina1, totalPaginas1, onAction }) => {
 
   const [pagina, setPagina] = useState(pagina1);
-  const [totalPaginas] = useState(totalPaginas1);
+  const [totalPaginas, setTotalPaginas] = useState(totalPaginas1);
 
-  const handleClickFirstPage = (pagina1) =>{
+  const handleClickFirstPage = (pagina) =>{
     if(pagina > 1){
       setPagina(1);
     }
-    console.log("boton", pagina)
-    return pagina;
   }
   
   const handleClickPrev = (pagina) =>{
@@ -35,32 +33,34 @@ const BotonPrevNextPaginado = ({ pagina1, totalPaginas1, onAction }) => {
     if(pagina < totalPaginas){
       setPagina(totalPaginas);
     }
-    return pagina;
   }
 
   
   return (
     <div className="prev-next-buttons">
+      {console.log(pagina, pagina, totalPaginas)}
       <button onClick={() => {
-          onAction(handleClickFirstPage(pagina1));
+          handleClickFirstPage(pagina);
+          console.log(pagina)
+          onAction(pagina);
         }} 
             id="prev-page-button"  
             aria-label="previous page"
             ><GrChapterPrevious /></button>
       <button onClick={() => {
-          onAction(handleClickPrev(pagina1));
+          onAction(handleClickPrev(pagina));
         }} 
             id="prev-page-button"  
             aria-label="previous page"
             ><GrCaretPrevious /></button>
       <button onClick={() => {
-          onAction(handleClickNext(totalPaginas1, pagina1));
+          onAction(handleClickNext(totalPaginas, pagina));
         }}  
             id="next-page-button" 
             aria-label="next page"
             ><GrCaretNext /></button>
       <button onClick={() => {
-          onAction(handleClickLastPage(totalPaginas1, pagina1));
+          onAction(handleClickLastPage(totalPaginas, pagina));
         }} 
             id="next-page-button" 
             aria-label="next page"

@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+import Cards from "./componentes_pequenios/Cards";
 import { GrChapterPrevious, GrCaretPrevious, GrCaretNext, GrChapterNext } from 'react-icons/gr';
 
 
 const UltimosLanzamientos = () => {
 
   const [arrayUltimosLanzamientos, setArrayUltimosLanzamientos] = useState([]);
+  const [paginaQuery] = useState(1);
   const [pagina, setPagina] = useState(1);
   const [totalPaginas, setTotalPaginas] = useState(1);
 
@@ -32,18 +34,13 @@ const UltimosLanzamientos = () => {
   return (
     <div className="page">
       <h1>Ultimos lanzamientos</h1>
-      <div className="container">
-        {arrayUltimosLanzamientos.map((pelicula) =>(
-        <div className="card">
-          <img src={`http://image.tmdb.org/t/p/w200/${pelicula.poster_path}`} 
-               alt={pelicula.title} 
-              />
-          <div>
-            <h2>{pelicula.title}</h2>
-          </div>
-        </div>
-        ))}
-      </div>
+      <Cards 
+        query={"Undefined"}
+        categoria={"upcoming"}
+        pagina={pagina}
+        paginaQuery={paginaQuery}
+        busqueda={false}
+        />
       <div className="prev-next-buttons">
         <button onClick={() => handleClickPrev(pagina)} 
                 id="prev-page-button"  
@@ -61,7 +58,7 @@ const UltimosLanzamientos = () => {
                 id="next-page-button" 
                 aria-label="next page"
                 ><GrChapterNext /></button>
-      </div>{console.log("hola")}
+      </div>
     </div>
   );
 }
