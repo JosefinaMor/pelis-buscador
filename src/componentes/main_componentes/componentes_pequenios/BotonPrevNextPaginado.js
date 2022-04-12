@@ -2,11 +2,10 @@ import { useState, useEffect } from "react";
 import { GrChapterPrevious, GrCaretPrevious, GrCaretNext, GrChapterNext } from 'react-icons/gr';
 
 
-const BotonPrevNextPaginado = (pagina) => {
+const BotonPrevNextPaginado = ({pagina, totalPaginas, onAction}) => {
 
-  const [arrayPelisPopulares, setArrayPelisPopulares] = useState([]);
-  const [pagina, setPagina] = useState(1);
-  const [totalPaginas, setTotalPaginas] = useState(1);
+  const [pagina, setPagina] = useState(pagina);
+  const [totalPaginas, setTotalPaginas] = useState(totalPaginas);
 
   const handleClickFirstPage = (pagina) =>{
     if(pagina > 1){
@@ -23,6 +22,7 @@ const BotonPrevNextPaginado = (pagina) => {
   const handleClickNext = (totalPaginas, pagina) =>{
     if(pagina < totalPaginas){
       setPagina(pagina + 1);
+      setpaginaParams({pagina: pagina + 1});
     }
   }
 
@@ -31,6 +31,7 @@ const BotonPrevNextPaginado = (pagina) => {
       setPagina(totalPaginas);
     }
   }
+
   
   return (
     <div className="prev-next-buttons">
@@ -50,6 +51,7 @@ const BotonPrevNextPaginado = (pagina) => {
             id="next-page-button" 
             aria-label="next page"
             ><GrChapterNext /></button>
+            {paginaParams}
     </div>
   );
 }
