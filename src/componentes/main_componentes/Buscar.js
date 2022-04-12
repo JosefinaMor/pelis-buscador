@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { BiSearchAlt } from "react-icons/bi";
-import { GrCaretNext, GrCaretPrevious } from 'react-icons/gr';
+import { GrChapterPrevious, GrCaretPrevious, GrCaretNext, GrChapterNext } from 'react-icons/gr';
+
 
 
 const Buscar = () => {
@@ -67,10 +68,16 @@ const Buscar = () => {
         <div className="prev-next-buttons">
         <button onClick={() => handleClickPrev(pagina)} 
                 id="prev-page-button"  
+                aria-label="previous page"><GrChapterPrevious /></button>
+        <button onClick={() => handleClickPrev(pagina)} 
+                id="prev-page-button"  
                 aria-label="previous page"><GrCaretPrevious /></button>
         <button onClick={() => handleClickNext(totalPaginas, pagina)} 
                 id="next-page-button" 
                 aria-label="next page"><GrCaretNext /></button>
+        <button onClick={() => handleClickNext(totalPaginas, pagina)} 
+                id="next-page-button" 
+                aria-label="next page"><GrChapterNext /></button>
       </div>
       </div>
     );
