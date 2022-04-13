@@ -2,6 +2,7 @@
 @import "./mini_componentes/prevNextButtons";
 
 .search-section{
+    height: 90vh;
     .buscador{
         @include box-parameter($margin: 30px 0);
         @include display-flex-creator($direction: row, $justify-content: center, $align-items: start);

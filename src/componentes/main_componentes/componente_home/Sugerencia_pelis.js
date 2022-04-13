@@ -21,7 +21,7 @@ const Sugerencia_pelis = ({ tipoPeli, titulo }) => {
         <ul> 
           <h2>{titulo}</h2>     
             {arrayPelis.map((pelicula) =>(
-                <Link  className={'link'} to={'/Pelicula'}>
+                <Link className={'link'} to={'/Pelicula'}>
                   <li className="card">                  
                     <h3>{pelicula.title}</h3>
                     <BiShow />

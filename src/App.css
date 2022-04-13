@@ -6,6 +6,9 @@ body {
   margin: 0;
   height: 100vh;
 }
+body .app {
+  height: 100vh;
+}
 
 .link {
   text-decoration: none;
@@ -260,6 +263,7 @@ body {
 }
 
 .search-section {
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: start;
