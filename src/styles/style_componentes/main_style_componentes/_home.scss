@@ -1,3 +1,5 @@
+@import "./mini_componentes/link";
+
 .container-home{
     @include display-flex-creator($justify-content: space-between, $align-items: center);
     margin: 90px 0 0 0;
@@ -11,10 +13,17 @@
             @include display-flex-creator($direction: column, $justify-content: start, $align-items: center);
             overflow: scroll;
             overflow-x: hidden;
-            .card{
+            .link{
+                width: 100%;
+               .card{
                 @include display-flex-creator($justify-content: space-between, $align-items: center);
-                @include box-parameter($margin: 0 0 10px 0, $padding: 5px, $width: 100%);
+                @include box-parameter($margin: 10px 0, $padding: 5px, $width: 100%);
+                }
+                .card:hover{
+                    background-color: $hover-color;
+                } 
             }
+            
         }
         ul::-webkit-scrollbar {
             -webkit-appearance: none;
@@ -33,7 +42,7 @@
         }
         
         ul::-webkit-scrollbar-thumb {
-            background-color: #797979;
+            background-color: $secundary-color;
             border-radius: 20px;
         }
         

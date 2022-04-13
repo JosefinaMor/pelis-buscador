@@ -1,15 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap");
 body {
   font-family: "Roboto", sans-serif;
   font-weight: "300";
-  background-color: #BCCBD8;
+  background-color: #D9ECF2;
   margin: 0;
   height: 100vh;
+}
+
+.link {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: "300";
 }
 
 .nav-bar {
   top: 0;
   width: 100vw;
-  background-color: #00000042;
+  background-color: #1AA6B7;
   color: #FFFFFF;
   position: fixed;
   z-index: 1;
@@ -26,11 +33,14 @@ body {
   margin-left: 5px;
   list-style: none;
 }
-.nav-bar ul li Link {
-  text-decoration: none;
-}
 .nav-bar ul li:hover {
-  background-color: #000000;
+  background-color: #F56A79;
+}
+
+.link {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: "300";
 }
 
 .container-home {
@@ -48,7 +58,7 @@ body {
 }
 .container-home .container-listas ul {
   height: 60vh;
-  background-color: #3E4658;
+  background-color: #002D40;
   color: #FFFFFF;
   border-radius: 10px;
   padding: 10px;
@@ -63,14 +73,20 @@ body {
   overflow: scroll;
   overflow-x: hidden;
 }
-.container-home .container-listas ul .card {
+.container-home .container-listas ul .link {
+  width: 100%;
+}
+.container-home .container-listas ul .link .card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 10px 0;
+  margin: 10px 0;
   padding: 5px;
   width: 100%;
+}
+.container-home .container-listas ul .link .card:hover {
+  background-color: #F56A79;
 }
 .container-home .container-listas ul::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -85,7 +101,7 @@ body {
   height: 10px;
 }
 .container-home .container-listas ul::-webkit-scrollbar-thumb {
-  background-color: #797979;
+  background-color: #1AA6B7;
   border-radius: 20px;
 }
 .container-home .container-listas ul::-webkit-scrollbar-track {
@@ -93,7 +109,7 @@ body {
 }
 
 .card {
-  background-color: #3E4658;
+  background-color: #002D40;
   color: #FFFFFF;
   border-radius: 10px;
   padding: 10px;
@@ -138,13 +154,13 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  background-color: #3E4658;
+  background-color: #1AA6B7;
   color: #FFFFFF;
   border: none;
   transition: 2ms;
 }
 .prev-next-buttons button:hover {
-  background-color: #8c9caf;
+  background-color: #F56A79;
 }
 .prev-next-buttons select {
   height: 40px;
@@ -154,8 +170,8 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  background-color: #ffffff;
-  color: #3E4658;
+  background-color: #FFFFFF;
+  color: #002D40;
   border: none;
 }
 
@@ -177,7 +193,7 @@ body {
 }
 
 .card {
-  background-color: #3E4658;
+  background-color: #002D40;
   color: #FFFFFF;
   border-radius: 10px;
   padding: 10px;
@@ -222,13 +238,13 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  background-color: #3E4658;
+  background-color: #1AA6B7;
   color: #FFFFFF;
   border: none;
   transition: 2ms;
 }
 .prev-next-buttons button:hover {
-  background-color: #8c9caf;
+  background-color: #F56A79;
 }
 .prev-next-buttons select {
   height: 40px;
@@ -238,8 +254,8 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  background-color: #ffffff;
-  color: #3E4658;
+  background-color: #FFFFFF;
+  color: #002D40;
   border: none;
 }
 
@@ -276,7 +292,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  background-color: #3E4658;
+  background-color: #1AA6B7;
   color: #FFFFFF;
   border: none;
 }
@@ -284,7 +300,7 @@ body {
   font-size: 15px;
 }
 .search-section .buscador button:hover {
-  background-color: #8c9caf;
+  background-color: #F56A79;
 }
 .search-section .container {
   display: flex;
@@ -306,7 +322,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  background-color: rgba(127, 255, 212, 0.604);
+  background-color: #1AA6B7;
 }
 .main-pelicula .container-peli .foto {
   width: 35%;
@@ -334,17 +350,17 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  background-color: blue;
+  background-color: #FF414D;
   color: #FFFFFF;
   border: none;
 }
 .main-pelicula .container-peli .info-general .titulo button:hover {
-  background-color: aquamarine;
+  background-color: #F56A79;
 }
 
 footer {
   height: 60px;
-  background-color: #00000042;
+  background-color: #1AA6B7;
   color: #FFFFFF;
   display: flex;
   justify-content: center;

@@ -1,8 +1,10 @@
+@import "./main_style_componentes/mini_componentes/link";
+
 .nav-bar{
     top: 0;
     width: 100vw;
-    background-color: #00000042;
-    color: #FFFFFF;
+    background-color: $secundary-color;
+    color: $typography-light-color;
     position: fixed;
     z-index: 1;
     ul{
@@ -15,12 +17,9 @@
         padding: 10px 5px 10px 5px;
         margin-left: 5px;
         list-style: none;
-        Link{
-          text-decoration: none;
-        }
       } 
       li:hover{
-        background-color: #000000;
+        background-color: $hover-color;
       }
     }
   }

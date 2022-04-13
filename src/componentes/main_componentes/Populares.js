@@ -13,13 +13,13 @@ const Populares = () => {
     setPagina(pagina);
   }
 
-  useEffect(() => {
+  /*useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=4e1ae359e8d00fd3c5fa0742e3a2be5f&language=es-ES&page=${pagina}`)
       .then(res => res.json())
       .then((cardData)=>{
         setTotalPaginas(cardData.total_pages);
       })
-  }, [pagina]);
+  }, [pagina]);*/
 
   //https://zeroidentidad.gitbook.io/react-puro-19/3-props/comunicacion_componente_padre
   return (

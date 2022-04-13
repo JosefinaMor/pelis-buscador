@@ -10,7 +10,7 @@
             @include input();
         }
         button{
-            @include button($back-color: $primary-color);
+            @include button($back-color: $secundary-color);
             i{
                 font-size: 15px;
             }

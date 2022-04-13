@@ -7,10 +7,10 @@ const NavBar = () => {
       <nav className="nav-bar">
           <ul>
               <li><GiFilmStrip /></li>
-              <li><Link to={'/'}>Home</Link></li>
-              <li><Link to={'/Ultimos_lanzamientos'}>Ultimos lanzamientos</Link></li>
-              <li><Link to={'/Populares'}>Populares</Link></li>
-              <li><Link to={'/Buscar'}>Buscar</Link></li>
+              <li><Link className={'link'} to={'/'}>Home</Link></li>
+              <li><Link className={'link'} to={'/Ultimos_lanzamientos'}>Ultimos lanzamientos</Link></li>
+              <li><Link className={'link'} to={'/Populares'}>Populares</Link></li>
+              <li><Link className={'link'} to={'/Buscar'}>Buscar</Link></li>
           </ul>
       </nav>
     );
