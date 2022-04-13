@@ -44,25 +44,21 @@ const BotonPrevNextPaginado = ({ pagina1, totalPaginas1, onAction }) => {
           console.log(pagina)
           onAction(pagina);
         }} 
-            id="prev-page-button"  
             aria-label="previous page"
             ><GrChapterPrevious /></button>
       <button onClick={() => {
           onAction(handleClickPrev(pagina));
         }} 
-            id="prev-page-button"  
             aria-label="previous page"
             ><GrCaretPrevious /></button>
       <button onClick={() => {
           onAction(handleClickNext(totalPaginas, pagina));
-        }}  
-            id="next-page-button" 
+        }}   
             aria-label="next page"
             ><GrCaretNext /></button>
       <button onClick={() => {
           onAction(handleClickLastPage(totalPaginas, pagina));
         }} 
-            id="next-page-button" 
             aria-label="next page"
             ><GrChapterNext /></button>
     </div>

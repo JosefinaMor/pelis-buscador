@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import Cards from "./componentes_pequenios/Cards";
 import BotonPrevNextPaginado from "./componentes_pequenios/BotonPrevNextPaginado";
 
-
-
 const Populares = () => {
  // const [arrayPelisPopulares, setArrayPelisPopulares] = useState([]);
   const [pagina, setPagina] = useState(1);
@@ -32,13 +30,14 @@ const Populares = () => {
         categoria={"top_rated"}
         pagina={pagina}
         paginaQuery={paginaQuery}
-        busqueda={true}/>
+        busqueda={false}
+      />
       <BotonPrevNextPaginado 
-        pagina={pagina}
-        totalPaginas={totalPaginas}
+        pagina1={pagina}
+        totalPaginas1={totalPaginas}
         onAction={(pagina) => handleAccion(pagina)}/>
     </div>
   );
 }
   
-  export default Populares;
+export default Populares;
