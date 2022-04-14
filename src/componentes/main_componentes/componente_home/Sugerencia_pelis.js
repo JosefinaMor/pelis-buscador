@@ -13,7 +13,9 @@ const Sugerencia_pelis = ({ tipoPeli, titulo }) => {
 
     const handleAbrirCerrarSugerenciasPelis = () =>{
       setMostrarPeli(mostrarPeli ? false : true);
-      console.log(mostrarPeli)
+      //nose como hacer para que se haga responsive esto, la idea es que cuando la pantalla sea menor a with:600px
+      //aparezca la sugerencia de peliculas colapsado y usar esta funcion. 
+      //¿Hay alguna manera de leer este tipo de evento (cambio de media query)? ¿o es con css?
     }
   
     useEffect(() => {

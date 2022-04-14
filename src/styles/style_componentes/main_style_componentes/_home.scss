@@ -5,14 +5,21 @@
     margin: 90px 0 0 0;
     .container-listas{
         width: 50%;
+        height: 100%;
         @include box-parameter($margin: 20px, $padding: 20px);
         ul{
-            height: 60vh;
+            max-height: 60vh;
             @include card-especification();
             @include box-parameter($margin: 20px, $padding: 20px, $width: 90%);
             @include display-flex-creator($direction: column, $justify-content: start, $align-items: center);
             overflow: scroll;
             overflow-x: hidden;
+            h2{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
             .link{
                 width: 100%;
                .card{
@@ -24,8 +31,7 @@
                     background-color: $hover-color;
                     transform: none;
                 } 
-            }
-            
+            }            
         }
         ul::-webkit-scrollbar {
             -webkit-appearance: none;

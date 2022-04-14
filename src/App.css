@@ -55,12 +55,13 @@ body .app {
 }
 .container-home .container-listas {
   width: 50%;
+  height: 100%;
   margin: 20px;
   padding: 20px;
   width: 100%;
 }
 .container-home .container-listas ul {
-  height: 60vh;
+  max-height: 60vh;
   background-color: #002D40;
   color: #FFFFFF;
   border-radius: 10px;
@@ -75,6 +76,12 @@ body .app {
   align-items: center;
   overflow: scroll;
   overflow-x: hidden;
+}
+.container-home .container-listas ul h2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .container-home .container-listas ul .link {
   width: 100%;
@@ -331,6 +338,7 @@ body .app {
   align-items: center;
 }
 .main-pelicula .container-peli {
+  border-radius: 10px;
   width: 70%;
   padding: 20px;
   display: flex;
