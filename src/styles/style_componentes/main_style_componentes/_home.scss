@@ -16,11 +16,13 @@
             .link{
                 width: 100%;
                .card{
-                @include display-flex-creator($justify-content: space-between, $align-items: center);
-                @include box-parameter($margin: 10px 0, $padding: 5px, $width: 100%);
+                    transform: none;
+                    @include display-flex-creator($justify-content: space-between, $align-items: center);
+                    @include box-parameter($margin: 10px 0, $padding: 5px, $width: 100%);
                 }
                 .card:hover{
                     background-color: $hover-color;
+                    transform: none;
                 } 
             }
             
@@ -50,4 +52,7 @@
             border-radius: 10px;  
         }
     }  
+}
+@media (max-width: 600px){
+    
 }

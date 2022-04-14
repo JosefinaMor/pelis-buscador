@@ -3,6 +3,7 @@
     margin: 10px;
     display: flex;
     flex-direction: column;
+    transform: translate(1s);
     div{
         @include display-flex-creator($justify-content: center, $align-items: center); 
         h2{
@@ -14,4 +15,7 @@
 }
 .card:hover{
     box-shadow: $box-shadow;
+    transform: scale(1.1);
+    background-color: $hover-color;
+    color: $typography-light-color;
 }

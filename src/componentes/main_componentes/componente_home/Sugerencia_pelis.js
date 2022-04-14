@@ -1,13 +1,21 @@
 import { useState, useEffect } from "react";
 import { BiShow } from "react-icons/bi";
 import { Link } from 'react-router-dom';
+import { GrCaretDown, GrCaretUp } from 'react-icons/gr';
+
 
 
 
 const Sugerencia_pelis = ({ tipoPeli, titulo }) => {
 
     const [arrayPelis, setArrayPelis] = useState([]);
-    
+    const [mostrarPeli, setMostrarPeli] = useState(true);
+
+    const handleAbrirCerrarSugerenciasPelis = () =>{
+      setMostrarPeli(mostrarPeli ? false : true);
+      console.log(mostrarPeli)
+    }
+  
     useEffect(() => {
       fetch(`https://api.themoviedb.org/3/movie/${tipoPeli}?api_key=4e1ae359e8d00fd3c5fa0742e3a2be5f&language=es-ES&page=1`)
         .then(res => res.json())
@@ -19,8 +27,8 @@ const Sugerencia_pelis = ({ tipoPeli, titulo }) => {
   
     return (
         <ul> 
-          <h2>{titulo}</h2>     
-            {arrayPelis.map((pelicula) =>(
+          <h2 onClick={handleAbrirCerrarSugerenciasPelis}><span>{titulo}</span> {mostrarPeli ? <GrCaretUp /> : <GrCaretDown />}</h2>     
+            {mostrarPeli && arrayPelis.map((pelicula) =>(
                 <Link className={'link'} to={'/Pelicula'}>
                   <li className="card">                  
                     <h3>{pelicula.title}</h3>
@@ -33,3 +41,6 @@ const Sugerencia_pelis = ({ tipoPeli, titulo }) => {
   }
   
   export default Sugerencia_pelis;
+
+
+

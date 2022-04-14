@@ -80,6 +80,7 @@ body .app {
   width: 100%;
 }
 .container-home .container-listas ul .link .card {
+  transform: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -90,6 +91,7 @@ body .app {
 }
 .container-home .container-listas ul .link .card:hover {
   background-color: #F56A79;
+  transform: none;
 }
 .container-home .container-listas ul::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -120,6 +122,7 @@ body .app {
   margin: 10px;
   display: flex;
   flex-direction: column;
+  transform: translate(1s);
 }
 .card div {
   display: flex;
@@ -135,6 +138,9 @@ body .app {
 
 .card:hover {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+  transform: scale(1.1);
+  background-color: #F56A79;
+  color: #FFFFFF;
 }
 
 .prev-next-buttons {
@@ -204,6 +210,7 @@ body .app {
   margin: 10px;
   display: flex;
   flex-direction: column;
+  transform: translate(1s);
 }
 .card div {
   display: flex;
@@ -219,6 +226,9 @@ body .app {
 
 .card:hover {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+  transform: scale(1.1);
+  background-color: #F56A79;
+  color: #FFFFFF;
 }
 
 .prev-next-buttons {
