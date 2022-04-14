@@ -50,7 +50,7 @@ body .app {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: space-between;
   margin: 90px 0 0 0;
 }
 .container-home .container-listas {

@@ -31,7 +31,7 @@ const Sugerencia_pelis = ({ tipoPeli, titulo }) => {
         <ul> 
           <h2 onClick={handleAbrirCerrarSugerenciasPelis}><span>{titulo}</span> {mostrarPeli ? <GrCaretUp /> : <GrCaretDown />}</h2>     
             {mostrarPeli && arrayPelis.map((pelicula) =>(
-                <Link className={'link'} to={'/Pelicula'}>
+                <Link className={'link'} to={'/Home/Pelicula'}>
                   <li className="card">                  
                     <h3>{pelicula.title}</h3>
                     <BiShow />

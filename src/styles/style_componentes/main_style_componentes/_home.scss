@@ -1,7 +1,7 @@
 @import "./mini_componentes/link";
 
 .container-home{
-    @include display-flex-creator($justify-content: space-between, $align-items: center);
+    @include display-flex-creator($justify-content: space-between, $align-items: space-between);
     margin: 90px 0 0 0;
     .container-listas{
         width: 50%;
